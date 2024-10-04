@@ -1,7 +1,13 @@
-export const defineManifest = (): chrome.runtime.ManifestV3 => {
-  type AllManifestPermissions = chrome.runtime.ManifestPermissions[]
+import { readJsonFile } from 'vite-plugin-web-extension'
 
-  const permissions: AllManifestPermissions = [
+interface Params {
+  updateXmlUrl?: string
+}
+
+export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.ManifestV3 => {
+  const pkg = readJsonFile('package.json')
+
+  const permissions: chrome.runtime.ManifestV3['permissions'] = [
     // @ts-expect-error Missing declaration in types
     'accessibilityFeatures.modify',
     // @ts-expect-error Missing declaration in types
@@ -92,14 +98,17 @@ export const defineManifest = (): chrome.runtime.ManifestV3 => {
     'webRequestAuthProvider',
   ]
 
+  const update_url: chrome.runtime.ManifestV3['update_url'] = updateXmlUrl || undefined
+
   return {
     manifest_version: 3,
-    version: '1.0.0',
+    version: pkg.version,
     name: 'Chrome extension tester',
     background: {
       service_worker: 'src/background.ts',
       type: 'module',
     },
+    update_url,
     permissions,
   }
 }
