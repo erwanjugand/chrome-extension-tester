@@ -109,6 +109,10 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
       service_worker: 'src/background.ts',
       type: 'module',
     },
+    externally_connectable: {
+      matches: ['https://erwan-jugand.fr/*'],
+    },
+    minimum_chrome_version: '125',
     update_url,
     permissions,
   }
