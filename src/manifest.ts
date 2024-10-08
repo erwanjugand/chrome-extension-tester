@@ -112,8 +112,10 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     externally_connectable: {
       matches: ['https://erwan-jugand.fr/*'],
     },
-    minimum_chrome_version: '125',
     update_url,
     permissions,
+    file_system_provider_capabilities: {
+      source: 'file',
+    },
   }
 }

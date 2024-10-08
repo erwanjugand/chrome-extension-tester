@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/chrome": "0.0.277",
     "@types/node": "22",
+    "chrome-types": "^0.1.307",
     "eslint": "9.11.1",
     "eslint-config-prettier": "9.1.0",
     "prettier": "3.3.3",

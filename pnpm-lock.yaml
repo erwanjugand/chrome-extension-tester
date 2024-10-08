@@ -14,6 +14,9 @@ importers:
       '@types/node':
         specifier: '22'
         version: 22.7.4
+      chrome-types:
+        specifier: ^0.1.307
+        version: 0.1.307
       eslint:
         specifier: 9.11.1
         version: 9.11.1
@@ -576,6 +579,9 @@ packages:
     resolution: {integrity: sha512-rJYWeEAERwWIr3c3mEVXwNiODPEdMRlRxHc47B1qHPOolHZnkj7rMv1QSUfPoG6MgatWj5AxSpnKKR4QEwEQIQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+
+  chrome-types@0.1.307:
+    resolution: {integrity: sha512-IbwiExo5HCD41m1cJ1veai3rhz26K/Ig+L3dsw59GpJkOHwtzPxvq1FJprt6xk6ZH0MCrbcZSA5g0wLPpOXsYQ==}
 
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
@@ -2135,6 +2141,8 @@ snapshots:
       lighthouse-logger: 2.0.1
     transitivePeerDependencies:
       - supports-color
+
+  chrome-types@0.1.307: {}
 
   ci-info@3.9.0: {}
 
