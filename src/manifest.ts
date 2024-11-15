@@ -103,6 +103,7 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
   return {
     manifest_version: 3,
     version: pkg.version,
+    kiosk_enabled: true,
     host_permissions: ['<all_urls>'],
     name: 'Chrome extension tester',
     background: {

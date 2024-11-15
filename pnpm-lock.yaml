@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@types/chrome':
-        specifier: 0.0.280
-        version: 0.0.280
+        specifier: 0.0.282
+        version: 0.0.282
       '@types/node':
         specifier: '22'
         version: 22.9.0
       chrome-types:
-        specifier: ^0.1.307
-        version: 0.1.318
+        specifier: ^0.1.321
+        version: 0.1.321
       eslint:
         specifier: 9.14.0
         version: 9.14.0
@@ -380,8 +380,8 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
-  '@types/chrome@0.0.280':
-    resolution: {integrity: sha512-AotSmZrL9bcZDDmSI1D9dE7PGbhOur5L0cKxXd7IqbVizQWCY4gcvupPUVsQ4FfDj3V2tt/iOpomT9EY0s+w1g==}
+  '@types/chrome@0.0.282':
+    resolution: {integrity: sha512-VZIa7YmtCks5TxyqUp6LzmiAOzBhDZ1wQ3HQdi0h7BeQ4eua7HTjhyMOh5I7y2V3DRUv21e0jGhrUTFZopiOwQ==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -590,8 +590,8 @@ packages:
     engines: {node: '>=12.13.0'}
     hasBin: true
 
-  chrome-types@0.1.318:
-    resolution: {integrity: sha512-Mgrj3wzcmUnlaTMAuJ2B5TWw+RoyED/LH42aHS4VHtN3FzrFV4Gq9LC5czvF2htSikCzJZ+LsDite7Dy5PIlRA==}
+  chrome-types@0.1.321:
+    resolution: {integrity: sha512-WvjaWVQGJf2CyDyswjMLi+JvcmN4RCZglk+3JrTSozxH9RNLgvMVuHbZ75obT4c9qezvIgsViG5iNNB3fWN5+Q==}
 
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
@@ -1904,7 +1904,7 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@types/chrome@0.0.280':
+  '@types/chrome@0.0.282':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
@@ -2133,7 +2133,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  chrome-types@0.1.318: {}
+  chrome-types@0.1.321: {}
 
   ci-info@3.9.0: {}
 
