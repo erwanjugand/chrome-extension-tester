@@ -118,5 +118,9 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     file_system_provider_capabilities: {
       source: 'file',
     },
+    action: {
+      default_title: 'Open popup',
+      default_popup: 'src/popup.html',
+    },
   }
 }
