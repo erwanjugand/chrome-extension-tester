@@ -8,9 +8,7 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
   const pkg = readJsonFile('package.json')
 
   const permissions: chrome.runtime.ManifestV3['permissions'] = [
-    // @ts-expect-error Missing declaration in types
     'accessibilityFeatures.modify',
-    // @ts-expect-error Missing declaration in types
     'accessibilityFeatures.read',
     'activeTab',
     'alarms',
@@ -34,7 +32,6 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     'desktopCapture',
     'documentScan',
     'downloads',
-    // @ts-expect-error Missing declaration in types
     'downloads.open',
     'downloads.shelf',
     'downloads.ui',
@@ -90,7 +87,6 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     'userScripts',
     'vpnProvider',
     'wallpaper',
-    // @ts-expect-error Missing declaration in types
     'webAuthenticationProxy',
     'webNavigation',
     'webRequest',
