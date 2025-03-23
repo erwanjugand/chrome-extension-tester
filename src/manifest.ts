@@ -124,5 +124,9 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
       default_title: 'Open popup',
       default_popup: 'src/popup.html',
     },
+    icons: {
+      '16': 'icon-16.png',
+      '48': 'icon-48.png',
+    },
   }
 }
