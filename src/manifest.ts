@@ -128,5 +128,6 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
       '16': 'icon-16.png',
       '48': 'icon-48.png',
     },
+    devtools_page: 'src/devtools/index.html',
   }
 }

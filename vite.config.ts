@@ -12,6 +12,7 @@ export default defineConfig(({ mode }) => {
       webExtension({
         manifest: () => defineManifest({ updateXmlUrl }),
         watchFilePaths: ['src/manifest.ts'],
+        additionalInputs: ['src/devtools/panel.html', 'src/devtools/panel.ts', 'src/devtools/index.ts'],
         disableAutoLaunch: true,
       }),
     ],
