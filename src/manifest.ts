@@ -64,7 +64,6 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     'privacy',
     // 'processes', // Dev channel
     'proxy',
-    // @ts-expect-error Missing declaration in types
     'readingList',
     'scripting',
     'search',
