@@ -14,15 +14,15 @@
     "fix:all": "pnpm fix:prettier && pnpm fix:eslint"
   },
   "devDependencies": {
-    "@types/chrome": "0.0.323",
+    "@types/chrome": "0.0.326",
     "@types/node": "22",
     "chrome-types": "^0.1.321",
-    "eslint": "9.27.0",
+    "eslint": "9.29.0",
     "eslint-config-prettier": "10.1.5",
     "prettier": "3.5.3",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.32.1",
+    "typescript-eslint": "8.34.1",
     "vite": "6.3.5",
-    "vite-plugin-web-extension": "4.4.3"
+    "vite-plugin-web-extension": "4.4.4"
   }
 }
