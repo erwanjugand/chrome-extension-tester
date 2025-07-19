@@ -33,8 +33,8 @@ importers:
         specifier: 8.37.0
         version: 8.37.0(eslint@9.31.0)(typescript@5.8.3)
       vite:
-        specifier: 6.3.5
-        version: 6.3.5(@types/node@22.16.5)(yaml@2.8.0)
+        specifier: 7.0.5
+        version: 7.0.5(@types/node@22.16.5)(yaml@2.8.0)
       vite-plugin-web-extension:
         specifier: 4.4.5
         version: 4.4.5(@types/node@22.16.5)
@@ -1473,19 +1473,19 @@ packages:
     resolution: {integrity: sha512-Ki4aPXYbhYSbCeZs8kz8xshXrF4aEToPZ+Zt2Q13Nb+nhjOlPHzsMsCfktPAQy+0sw2u1rygMZQkKSMfX50Z1Q==}
     engines: {node: '>=16'}
 
-  vite@6.3.5:
-    resolution: {integrity: sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vite@7.0.5:
+    resolution: {integrity: sha512-1mncVwJxy2C9ThLwz0+2GKZyEXuC3MyWtAAlNftlZZXZDP3AJt5FmwcMit/IGGaNZ8ZOB2BNO/HFUB+CpN0NQw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
+      '@types/node': ^20.19.0 || >=22.12.0
       jiti: '>=1.21.0'
-      less: '*'
+      less: ^4.0.0
       lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
       terser: ^5.16.0
       tsx: ^4.8.1
       yaml: ^2.4.2
@@ -2938,7 +2938,7 @@ snapshots:
       lodash.uniq: 4.5.0
       lodash.uniqby: 4.7.0
       md5: 2.3.0
-      vite: 6.3.5(@types/node@22.16.5)(yaml@2.8.0)
+      vite: 7.0.5(@types/node@22.16.5)(yaml@2.8.0)
       web-ext-option-types: 8.3.1
       web-ext-run: 0.2.3
       webextension-polyfill: 0.10.0
@@ -2958,7 +2958,7 @@ snapshots:
       - tsx
       - utf-8-validate
 
-  vite@6.3.5(@types/node@22.16.5)(yaml@2.8.0):
+  vite@7.0.5(@types/node@22.16.5)(yaml@2.8.0):
     dependencies:
       esbuild: 0.25.7
       fdir: 6.4.6(picomatch@4.0.3)
