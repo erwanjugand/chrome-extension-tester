@@ -91,18 +91,6 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     'webRequest',
     // 'webRequestBlocking', // For manifest v2
     'webRequestAuthProvider',
-    // @ts-expect-error API Platform
-    'networking.config',
-    // @ts-expect-error API Platform
-    'enterprise.serial',
-    // @ts-expect-error API Platform
-    'serial',
-    // @ts-expect-error API Platform
-    'browser',
-    // @ts-expect-error API Platform
-    'socket',
-    // @ts-expect-error API Platform
-    'networking.onc',
   ]
 
   const update_url: chrome.runtime.ManifestV3['update_url'] = updateXmlUrl || undefined
@@ -140,5 +128,13 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
       '48': 'icon-48.png',
     },
     devtools_page: 'src/devtools/index.html',
+    commands: {
+      test: {
+        suggested_key: {
+          default: 'Ctrl+M',
+        },
+        description: 'Just a test',
+      },
+    },
   }
 }
