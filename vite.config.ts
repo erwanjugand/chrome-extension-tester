@@ -1,7 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
-import webExtension from 'vite-plugin-web-extension'
-
 import { defineManifest } from './src/manifest'
+import webExtension from 'vite-plugin-web-extension'
 
 export default defineConfig(({ mode }) => {
   const modeEnv = loadEnv(mode, process.cwd())
@@ -10,10 +9,10 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       webExtension({
-        manifest: () => defineManifest({ updateXmlUrl }),
-        watchFilePaths: ['src/manifest.ts'],
         additionalInputs: ['src/devtools/panel.html', 'src/devtools/panel.ts', 'src/devtools/index.ts'],
         disableAutoLaunch: true,
+        manifest: () => defineManifest({ updateXmlUrl }),
+        watchFilePaths: ['src/manifest.ts'],
       }),
     ],
   }
