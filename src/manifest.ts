@@ -36,6 +36,8 @@ const permissions = [
   'enterprise.hardwarePlatform',
   'enterprise.networkingAttributes',
   'enterprise.platformKeys',
+  // @ts-expect-error futur permission
+  'enterprise.login',
   // 'experimental', // requires the 'experimental-extension-apis' command line switch to be enabled.
   'favicon',
   'fileBrowserHandler',
@@ -132,6 +134,7 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     kiosk_enabled: true,
     manifest_version: 3,
     name: 'Chrome extension tester',
+    // @ts-expect-error future permission
     permissions,
     update_url,
     version: pkg.version,
