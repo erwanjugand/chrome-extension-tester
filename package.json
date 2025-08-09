@@ -16,8 +16,8 @@
   "devDependencies": {
     "@prettier/plugin-oxc": "0.0.4",
     "@types/chrome": "0.1.1",
-    "@types/node": "22",
-    "chrome-types": "^0.1.321",
+    "@types/node": "22.16.5",
+    "chrome-types": "0.1.361",
     "oxlint": "1.11.0",
     "prettier": "3.6.2",
     "typescript": "5.8.3",
