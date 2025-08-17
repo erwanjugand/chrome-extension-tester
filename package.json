@@ -15,13 +15,13 @@
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "0.0.4",
-    "@types/chrome": "0.1.1",
-    "@types/node": "22.16.5",
-    "chrome-types": "0.1.361",
-    "oxlint": "1.11.0",
+    "@types/chrome": "0.1.4",
+    "@types/node": "22.17.2",
+    "chrome-types": "0.1.371",
+    "oxlint": "1.12.0",
     "prettier": "3.6.2",
-    "typescript": "5.8.3",
-    "vite": "7.0.5",
+    "typescript": "5.9.2",
+    "vite": "7.1.2",
     "vite-plugin-web-extension": "4.4.5"
   }
 }
