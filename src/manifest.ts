@@ -122,6 +122,13 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     externally_connectable: {
       matches: ['https://erwan-jugand.fr/*'],
     },
+    file_browser_handlers: [
+      {
+        default_title: 'Open with My Extension',
+        file_filters: ['filesystem:*.jpg', 'filesystem:*.jpeg', 'filesystem:*.png'],
+        id: 'my-file-handler',
+      },
+    ],
     file_system_provider_capabilities: {
       source: 'file',
     },

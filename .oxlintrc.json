@@ -3,7 +3,8 @@
   "rules": {
     "unicorn/filename-case": ["error", { "cases": { "camelCase": true } }],
     "import/prefer-default-export": "off",
-    "eslint/no-ternary": "off"
+    "eslint/no-ternary": "off",
+    "max-lines-per-function": "off"
   },
   "categories": {
     "correctness": "error",
