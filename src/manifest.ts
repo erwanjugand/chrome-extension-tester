@@ -118,6 +118,7 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
         matches: ['<all_urls>'],
       },
     ],
+    default_locale: 'en',
     devtools_page: 'src/devtools/index.html',
     externally_connectable: {
       matches: ['https://erwan-jugand.fr/*'],

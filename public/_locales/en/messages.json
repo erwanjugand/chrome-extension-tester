@@ -1,0 +1,24 @@
+{
+  "extensionName": {
+    "message": "Chrome extension tester"
+  },
+  "textWithSubstitution": {
+    "message": "This is a text with a substitution: $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "textWithHtml": {
+    "message": "This is a text with <b>HTML</b> content"
+  },
+  "textWithHtmlAndSubstitution": {
+    "message": "This is a text with <b>HTML</b> content and a substitution: $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  }
+}
