@@ -39,6 +39,8 @@ const permissions = [
   'enterprise.login',
   // 'experimental', // requires the 'experimental-extension-apis' command line switch to be enabled.
   'favicon',
+  // @ts-expect-error Missing in types
+  'input',
   'fileBrowserHandler',
   'fileSystemProvider',
   'fontSettings',
@@ -141,6 +143,7 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     kiosk_enabled: true,
     manifest_version: 3,
     name: 'Chrome extension tester',
+    // @ts-expect-error Missing in types
     permissions,
     update_url,
     version: pkg.version,
