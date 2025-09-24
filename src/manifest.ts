@@ -143,6 +143,9 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     kiosk_enabled: true,
     manifest_version: 3,
     name: 'Chrome extension tester',
+    omnibox: {
+      keyword: 'aaron',
+    },
     // @ts-expect-error Missing in types
     permissions,
     update_url,
