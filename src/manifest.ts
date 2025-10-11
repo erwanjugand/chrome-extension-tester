@@ -1,10 +1,12 @@
+// oxlint-disable no-magic-numbers
 import { readJsonFile } from 'vite-plugin-web-extension'
 
 interface Params {
+  version: 2 | 3
   updateXmlUrl?: string
 }
 
-const permissions = [
+const commonPermissions = [
   'accessibilityFeatures.modify',
   'accessibilityFeatures.read',
   'activeTab',
@@ -54,7 +56,7 @@ const permissions = [
   'management',
   'nativeMessaging',
   'notifications',
-  'offscreen',
+  // 'offscreen', // For manifest v3
   'pageCapture',
   'platformKeys',
   'power',
@@ -64,11 +66,11 @@ const permissions = [
   'privacy',
   // 'processes', // Dev channel
   'proxy',
-  'readingList',
-  'scripting',
+  // 'readingList', // For manifest v3
+  // 'scripting', // For manifest v3
   'search',
   'sessions',
-  'sidePanel',
+  // 'sidePanel', // For manifest v3
   // 'signedInDevices', // Dev channel
   'storage',
   'system.cpu',
@@ -77,35 +79,27 @@ const permissions = [
   'system.storage',
   'systemLog',
   'tabCapture',
-  'tabGroups',
+  // 'tabGroups', // For manifest v3
   'tabs',
   'topSites',
   'tts',
   'ttsEngine',
   'unlimitedStorage',
-  'userScripts',
+  // 'userScripts', // For manifest v3
   'vpnProvider',
   'wallpaper',
-  'webAuthenticationProxy',
+  // 'webAuthenticationProxy', // For manifest v3
   'webNavigation',
   'webRequest',
   // 'webRequestBlocking', // For manifest v2
   'webRequestAuthProvider',
 ] as const satisfies chrome.runtime.ManifestV3['permissions']
 
-export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.ManifestV3 => {
+export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtime.Manifest => {
   const pkg = readJsonFile('package.json')
-  const update_url: chrome.runtime.ManifestV3['update_url'] = updateXmlUrl ?? undefined
+  const update_url: chrome.runtime.Manifest['update_url'] = updateXmlUrl ?? undefined
 
-  return {
-    action: {
-      default_popup: 'src/popup.html',
-      default_title: 'Open popup',
-    },
-    background: {
-      service_worker: 'src/background.ts',
-      type: 'module',
-    },
+  const commonManifest = {
     commands: {
       test: {
         description: 'Just a test',
@@ -121,6 +115,7 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
       },
     ],
     default_locale: 'en',
+    description: '__MSG_extensionDescription__',
     devtools_page: 'src/devtools/index.html',
     externally_connectable: {
       matches: ['https://erwan-jugand.fr/*'],
@@ -135,20 +130,61 @@ export const defineManifest = ({ updateXmlUrl }: Params): chrome.runtime.Manifes
     file_system_provider_capabilities: {
       source: 'file',
     },
-    host_permissions: ['<all_urls>'],
     icons: {
       '16': 'icon-16.png',
       '48': 'icon-48.png',
     },
     kiosk_enabled: true,
-    manifest_version: 3,
-    name: 'Chrome extension tester',
+    name: '__MSG_extensionName__',
     omnibox: {
       keyword: 'aaron',
     },
-    // @ts-expect-error Missing in types
-    permissions,
     update_url,
     version: pkg.version,
+  } satisfies Omit<chrome.runtime.Manifest, 'manifest_version'>
+
+  if (version === 2) {
+    return {
+      ...commonManifest,
+      background: {
+        scripts: ['src/background.ts'],
+      },
+      // browser_action: {
+      //   default_popup: 'src/popup.html',
+      //   default_title: 'Open popup',
+      // },
+      manifest_version: 2,
+      page_action: {
+        default_popup: 'src/popup.html',
+        default_title: 'Open popup',
+      },
+      permissions: [...commonPermissions, 'webRequestBlocking', 'declarativeWebRequest'],
+    } as const satisfies chrome.runtime.ManifestV2
   }
+
+  // @ts-expect-error Missing in types
+  return {
+    ...commonManifest,
+    action: {
+      default_popup: 'src/popup.html',
+      default_title: 'Open popup',
+    },
+    background: {
+      service_worker: 'src/background.ts',
+      type: 'module',
+    },
+    host_permissions: ['<all_urls>'],
+    manifest_version: 3,
+    // @ts-expect-error Missing in types
+    permissions: [
+      ...commonPermissions,
+      'tabGroups',
+      'scripting',
+      'webAuthenticationProxy',
+      'offscreen',
+      'sidePanel',
+      'readingList',
+      'userScripts',
+    ],
+  } as const satisfies chrome.runtime.ManifestV3
 }

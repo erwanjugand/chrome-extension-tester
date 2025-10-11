@@ -1,5 +1,7 @@
 node_modules
 dist
+dist-mv3
+dist-mv2
 *.crx
 *.pem
 .env

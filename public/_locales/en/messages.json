@@ -2,6 +2,9 @@
   "extensionName": {
     "message": "Chrome extension tester"
   },
+  "extensionDescription": {
+    "message": "Allows to test all Chrome extension APIs"
+  },
   "textWithSubstitution": {
     "message": "This is a text with a substitution: $1",
     "placeholders": {

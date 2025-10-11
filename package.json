@@ -1,10 +1,12 @@
 {
   "private": true,
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "pnpm build:mv3 && pnpm build:mv2",
+    "build:mv3": "vite build --mode mv3",
+    "build:mv2": "vite build --mode mv2",
     "check:prettier": "prettier --check .",
     "check:lint": "oxlint",
     "check:ts": "tsc --noEmit",

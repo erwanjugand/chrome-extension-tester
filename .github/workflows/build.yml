@@ -37,14 +37,14 @@ jobs:
         run: jq '.version  += ".${{ github.run_number }}"' package.json > package.json.tmp && mv package.json.tmp package.json
 
       - name: Build
-        run: pnpm build
+        run: pnpm build:mv3
         env:
           VITE_DOMAIN_URL: ${{ secrets.DOMAIN_URL }}
 
       - name: Zip extension
         uses: cardinalby/webext-buildtools-pack-extension-dir-action@v1
         with:
-          extensionDir: 'dist'
+          extensionDir: 'dist-mv3'
           zipFilePath: 'extension.zip'
 
       - uses: cardinalby/webext-buildtools-chrome-crx-action@v2
