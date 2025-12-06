@@ -14,15 +14,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
         with:
           version: 10
 
       - name: Setup node
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version: 24
           cache: 'pnpm'
@@ -42,12 +42,12 @@ jobs:
           VITE_DOMAIN_URL: ${{ secrets.DOMAIN_URL }}
 
       - name: Zip extension
-        uses: cardinalby/webext-buildtools-pack-extension-dir-action@v1
+        uses: cardinalby/webext-buildtools-pack-extension-dir-action@28fdcac9860fb08555580587cab0d33afe4a341d # v1.0.8
         with:
           extensionDir: 'dist-mv3'
           zipFilePath: 'extension.zip'
 
-      - uses: cardinalby/webext-buildtools-chrome-crx-action@v2
+      - uses: cardinalby/webext-buildtools-chrome-crx-action@200e7173cbdb5acb91d381cf9f7a30080b025047 # v2.0.3
         with:
           zipFilePath: 'extension.zip'
           crxFilePath: 'extension.crx'
@@ -56,7 +56,7 @@ jobs:
           updateXmlCodebaseUrl: '${{ secrets.DOMAIN_URL }}/extension.crx'
 
       - name: Upload built artifacts
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
           name: chrome_extension_tester
           path: |
