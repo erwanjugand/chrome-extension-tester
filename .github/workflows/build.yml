@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: Setup pnpm
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
@@ -22,7 +22,7 @@ jobs:
           version: 10
 
       - name: Setup node
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version: 24
           cache: 'pnpm'
@@ -42,7 +42,7 @@ jobs:
           VITE_DOMAIN_URL: ${{ secrets.DOMAIN_URL }}
 
       - name: Zip extension
-        uses: cardinalby/webext-buildtools-pack-extension-dir-action@28fdcac9860fb08555580587cab0d33afe4a341d # v1.0.8
+        uses: cardinalby/webext-buildtools-pack-extension-dir-action@ff720c809940cd5a1cbb048e988cccc71837ade4 # 1.0.9
         with:
           extensionDir: 'dist-mv3'
           zipFilePath: 'extension.zip'
