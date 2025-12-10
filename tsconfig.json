@@ -8,7 +8,6 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "noEmit": true,
-    "types": ["node", "@types/chrome"],
     "skipLibCheck": true
   }
 }
