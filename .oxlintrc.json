@@ -5,7 +5,9 @@
     "import/prefer-default-export": "off",
     "import/no-named-export": "off",
     "eslint/no-ternary": "off",
-    "max-lines-per-function": "off"
+    "max-lines-per-function": "off",
+    "capitalized-comments": "off",
+    "eslint/no-implicit-coercion": "off"
   },
   "categories": {
     "correctness": "error",
