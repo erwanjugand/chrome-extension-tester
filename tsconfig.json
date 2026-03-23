@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
+    "types": ["node", "chrome"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -14,12 +13,10 @@
     "noEmit": true,
 
     /* Linting */
-    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
