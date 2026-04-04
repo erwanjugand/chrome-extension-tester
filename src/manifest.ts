@@ -128,7 +128,7 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       },
     ],
     file_system_provider_capabilities: {
-      source: 'file',
+      source: 'file' as const,
     },
     icons: {
       '16': 'icon-16.png',
