@@ -186,5 +186,8 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       'readingList',
       'userScripts',
     ],
+    side_panel: {
+      default_path: 'src/sidePanel.html',
+    },
   } as const satisfies chrome.runtime.ManifestV3
 }
