@@ -24,6 +24,6 @@
     "prettier": "3.8.1",
     "typescript": "6.0.2",
     "vite": "8.0.5",
-    "vite-plugin-web-extension": "4.5.0"
+    "vite-plugin-web-extension": "4.5.1"
   }
 }
