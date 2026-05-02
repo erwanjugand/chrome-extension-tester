@@ -1,7 +1,8 @@
 // oxlint-disable no-magic-numbers
 import { defineConfig, loadEnv } from 'vite'
-import { defineManifest } from './src/manifest'
 import webExtension from 'vite-plugin-web-extension'
+
+import { defineManifest } from './src/manifest'
 
 export default defineConfig(({ mode }) => {
   const modeEnv = loadEnv(mode, process.cwd())
