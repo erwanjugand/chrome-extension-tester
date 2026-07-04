@@ -41,7 +41,6 @@ const commonPermissions = [
   'enterprise.login',
   // 'experimental', // requires the 'experimental-extension-apis' command line switch to be enabled.
   'favicon',
-  // @ts-expect-error Missing in types
   'input',
   'fileBrowserHandler',
   'fileSystemProvider',
@@ -162,7 +161,6 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
     } as const satisfies chrome.runtime.ManifestV2
   }
 
-  // @ts-expect-error Missing in types
   return {
     ...commonManifest,
     action: {
@@ -175,7 +173,6 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
     },
     host_permissions: ['<all_urls>'],
     manifest_version: 3,
-    // @ts-expect-error Missing in types
     permissions: [
       ...commonPermissions,
       'tabGroups',
