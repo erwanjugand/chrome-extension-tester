@@ -148,10 +148,11 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       background: {
         scripts: ['src/background.ts'],
       },
-      // browser_action: {
-      //   default_popup: 'src/popup.html',
-      //   default_title: 'Open popup',
-      // },
+      browser_action: {
+        default_icon: { 48: 'icon-negate-48.png' },
+        default_popup: 'src/popup.html',
+        default_title: 'Open popup',
+      },
       manifest_version: 2,
       options_page: 'src/options.html',
       options_ui: {
@@ -160,10 +161,11 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
         open_in_tab: true,
         page: 'src/options.html',
       },
-      page_action: {
-        default_popup: 'src/popup.html',
-        default_title: 'Open popup',
-      },
+      // page_action: {
+      //   default_icon: { 48: 'icon-negate-48.png'},
+      //   default_popup: 'src/popup.html',
+      //   default_title: 'Open popup',
+      // },
       permissions: [...commonPermissions, 'webRequestBlocking', 'declarativeWebRequest'],
     } as const satisfies chrome.runtime.ManifestV2
   }
@@ -171,6 +173,7 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
   return {
     ...commonManifest,
     action: {
+      default_icon: { 48: 'icon-negate-48.png' },
       default_popup: 'src/popup.html',
       default_title: 'Open popup',
     },
