@@ -103,7 +103,7 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       test: {
         description: 'Just a test',
         suggested_key: {
-          default: 'Ctrl+M',
+          default: 'Ctrl+Shift+Y',
         },
       },
     },
