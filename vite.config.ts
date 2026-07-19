@@ -16,7 +16,13 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       webExtension({
-        additionalInputs: ['src/devtools/panel.html', 'src/devtools/panel.ts', 'src/devtools/index.ts'],
+        additionalInputs: [
+          'src/devtools/panel.html',
+          'src/devtools/panel.ts',
+          'src/devtools/index.ts',
+          'src/options.html',
+          ...(version === 3 ? ['src/viewer.html'] : []),
+        ],
         disableAutoLaunch: true,
         manifest: () => defineManifest({ updateXmlUrl, version }),
         watchFilePaths: ['src/manifest.ts'],

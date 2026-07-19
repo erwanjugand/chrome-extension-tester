@@ -153,6 +153,13 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       //   default_title: 'Open popup',
       // },
       manifest_version: 2,
+      options_page: 'src/options.html',
+      options_ui: {
+        // @ts-expect-error missing key
+        chrome_style: true,
+        open_in_tab: true,
+        page: 'src/options.html',
+      },
       page_action: {
         default_popup: 'src/popup.html',
         default_title: 'Open popup',
@@ -173,6 +180,17 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
     },
     host_permissions: ['<all_urls>'],
     manifest_version: 3,
+    mime_types_handler: {
+      'application/pdf': {
+        can_embed: true,
+        handler_url: 'src/viewer.html',
+      },
+    },
+    options_page: 'src/options.html',
+    options_ui: {
+      open_in_tab: true,
+      page: 'src/options.html',
+    },
     permissions: [
       ...commonPermissions,
       'tabGroups',
