@@ -18,7 +18,8 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "exactOptionalPropertyTypes": true
   },
   "include": ["src"]
 }

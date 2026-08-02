@@ -135,6 +135,10 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
     },
     kiosk_enabled: true,
     name: '__MSG_extensionName__',
+    oauth2: {
+      client_id: '...apps.googleusercontent.com',
+      scopes: ['https://www.googleapis.com/auth/userinfo.email'],
+    },
     omnibox: {
       keyword: 'aaron',
     },
