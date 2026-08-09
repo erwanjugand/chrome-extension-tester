@@ -170,7 +170,7 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       //   default_popup: 'src/popup.html',
       //   default_title: 'Open popup',
       // },
-      permissions: [...commonPermissions, 'webRequestBlocking', 'declarativeWebRequest'],
+      permissions: [...commonPermissions, 'webRequestBlocking', 'declarativeWebRequest', 'https://erwan-jugand.fr/*'],
     } as const satisfies chrome.runtime.ManifestV2
   }
 
