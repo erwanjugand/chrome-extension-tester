@@ -160,7 +160,6 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       manifest_version: 2,
       options_page: 'src/options.html',
       options_ui: {
-        // @ts-expect-error missing key
         chrome_style: true,
         open_in_tab: true,
         page: 'src/options.html',
