@@ -1,4 +1,5 @@
 minimumReleaseAgeExclude:
   - '@erwanjugand/*'
+minimumReleaseAgeExcludePrune: true
 allowBuilds:
   spawn-sync: false

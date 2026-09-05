@@ -6,6 +6,7 @@
     "import/no-named-export": "off",
     "eslint/sort-imports": "off",
     "eslint/no-ternary": "off",
+    "eslint/one-var": "off",
     "max-lines-per-function": "off",
     "capitalized-comments": "off",
     "eslint/no-implicit-coercion": "off"
