@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.25.0",
   "type": "module",
   "version": "1.1.0",
   "scripts": {
@@ -17,15 +17,15 @@
     "fix:all": "pnpm fix:prettier && pnpm fix:lint"
   },
   "devDependencies": {
-    "@erwanjugand/prettier-config": "1.0.1",
-    "@prettier/plugin-oxc": "0.2.0",
-    "@types/chrome": "0.2.2",
-    "@types/node": "24.13.2",
-    "chrome-types": "0.1.432",
-    "oxlint": "1.72.0",
-    "prettier": "3.9.4",
+    "@erwanjugand/prettier-config": "1.1.1",
+    "@prettier/plugin-oxc": "0.2.2",
+    "@types/chrome": "0.2.8",
+    "@types/node": "24.13.3",
+    "chrome-types": "0.1.443",
+    "oxlint": "1.81.0",
+    "prettier": "3.9.6",
     "typescript": "6.0.3",
-    "vite": "8.1.3",
+    "vite": "8.2.2",
     "vite-plugin-web-extension": "4.5.1"
   }
 }
