@@ -113,6 +113,9 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
         matches: ['<all_urls>'],
       },
     ],
+    declarative_net_request: {
+      rule_resources: [{ enabled: true, id: 'ruleset_valid', path: 'rules_ok.json' }],
+    },
     default_locale: 'en',
     description: '__MSG_extensionDescription__',
     devtools_page: 'src/devtools/index.html',

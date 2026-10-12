@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "transform": { "scheme": "https" } } },
+    "condition": { "urlFilter": "||example.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||blocked.test", "resourceTypes": ["main_frame"] }
+  }
+]
