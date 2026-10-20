@@ -114,7 +114,7 @@ export const defineManifest = ({ updateXmlUrl, version }: Params): chrome.runtim
       },
     ],
     declarative_net_request: {
-      rule_resources: [{ enabled: true, id: 'ruleset_valid', path: 'rules_ok.json' }],
+      rule_resources: [{ enabled: true, id: 'ruleset_valid', path: 'rules_valid.json' }],
     },
     default_locale: 'en',
     description: '__MSG_extensionDescription__',
