@@ -20,7 +20,7 @@
     "@erwanjugand/prettier-config": "1.1.2",
     "@prettier/plugin-oxc": "0.2.3",
     "@types/chrome": "0.3.4",
-    "@types/node": "24.19.1",
+    "@types/node": "26.6.5",
     "chrome-types": "0.1.450",
     "oxlint": "1.86.0",
     "prettier": "3.9.9",
